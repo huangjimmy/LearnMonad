@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace JSONBasedViewLoader
+namespace LearnMonad
 {
 	class Maybe<T>
 	{
