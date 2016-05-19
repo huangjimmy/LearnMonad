@@ -84,8 +84,8 @@ namespace LearnMonad
 			Console.WriteLine(r.Value);
 
 			Func<double, double> square = x => x * x;
-			Func<double, double> add3 = x => x + 3;
 			Func<double, double, double> add = (x, y) => x+y; 
+			Func<double, double> add3 = add.Curry () (3);
 			Func<double, Maybe<double>> UnitMaybeDouble = UnitMaybe<double>;
 			Func<Maybe<double>, Func<double, Maybe<double>>, Maybe<double>> BindMaybeDouble = BindMaybe<double, double>;
 			Func<Maybe<double>, Maybe<double>, Maybe<double>> addMaybe = (x, y) => BindMaybeDouble(x, 
